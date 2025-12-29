@@ -22,7 +22,7 @@ end
 
 -- called each frame
 function plugin.on_frame(data, settings)
-	next_swap_time = config.frame_count+1
+	next_swap_time = next_swap_time+1000
 	if name == "Sonic The Hedgehog (W) (REV00) [!]" or name == "Sonic The Hedgehog 3 (U) [!]" or name == "Sonic The Hedgehog 2 (W) (REV00) [!]" or name == "Sonic and Knuckles (W) [!]" then
 		if memory.read_u16_be(0xFE20,"68K RAM") > oldring then
 			ring_swap()
@@ -83,6 +83,54 @@ function plugin.on_frame(data, settings)
 			return
 		end
 		oldring = memory.read_u8(0x12AA,"Main RAM")
+	elseif name == "Sonic The Hedgehog 2 (E)" then
+		if memory.read_u8(0x1299,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x1299,"Main RAM")
+	elseif name == "Sonic Chaos (E)" then
+		if memory.read_u8(0x129A,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x129A,"Main RAM")
+	elseif name == "Dr. Robotnik's Mean Bean Machine (E)" then
+		if memory.read_u8(0x0CC0,"Main RAM") > oldring+39 then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x0CC0,"Main RAM")
+	elseif name == "Sonic Drift (J)" then
+		if memory.read_u8(0x1A00,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x1A00,"Main RAM")
+	elseif name == "Sonic Spinball (E)" then
+		if memory.read_u8(0x1E84,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x1E84,"Main RAM")
+	elseif name == "Sonic The Hedgehog - Triple Trouble (UE)" then
+		if memory.read_u8(0x1159,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x1159,"Main RAM")
+	elseif name == "Sonic Drift 2 (JU)" then
+		if memory.read_u8(0x1CC3,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x1CC3,"Main RAM")
+	elseif name == "Sonic Blast (B)" then
+		if memory.read_u8(0x125E,"Main RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u8(0x125E,"Main RAM")
 	end
 end
 
