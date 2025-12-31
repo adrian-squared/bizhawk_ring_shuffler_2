@@ -1,8 +1,6 @@
 # Bizhawk Ring Shuffler 2
 Plugin for Bizhawk Shuffler 2 inspired by Alistair Aitcheson's Bizhawk Ring Shuffler
 
-For now the games are hardcoded to be the Rev0 US versions, and other revisions will probably not be detected, I will add them when I get around to it
-
 Currently supports
 
 **Mega Drive:** Sonic 1, 2, 3, & Knuckles, Eraser, Spinball, 3D, Dr. Robotnik's Mean Bean Machine, Sonic & Knuckles+Sonic 1 (Blue Spheres)
@@ -13,4 +11,12 @@ Currently supports
 
 **Master System:** Sonic 1, 2, Chaos, Spinball, Blast, Dr. Robotnik's Mean Bean Machine
 
-**Game Gear:** Sonic Drift, Drift 2, Triple Trouble
+**Game Gear:** Sonic 1, 2, Chaos, Drift, Drift 2, Triple Trouble, Spinball, Blast, Dr. Robotnik's Mean Bean Machine
+
+**Saturn:** Sonic R, Jam (Sonic World), 3D Blast
+
+**Game Boy Advance:** Sonic Advance, Advance 2, Advance 3
+
+**DS:** Sonic Rush, Rush Adventures, Colours
+
+**3DS:** Sonic Generations, Lost World
