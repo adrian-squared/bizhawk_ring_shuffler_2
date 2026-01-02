@@ -20,3 +20,7 @@ Currently supports
 **DS:** Sonic Rush, Rush Adventures, Colours
 
 **3DS:** Sonic Generations, Lost World
+
+**Neo-Geo Pocket Colour:** Sonic Pocket Adventure
+
+**Arcade:** SegaSonic Bros.
