@@ -262,6 +262,20 @@ function plugin.on_frame(data, settings)
 			return
 		end
 		oldring = memory.read_u16_be(0x06D13900,"FCRAM")
+	-- Neo-Geo Pocket Colour Games
+	elseif name == "Sonic The Hedgehog - Pocket Adventure (W)" then
+		if memory.read_u16_be(0x27A8,"RAM") > oldring then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u16_be(0x27A8,"RAM")
+	-- Arcade Games
+	elseif name == "SegaSonic Bros. (prototype, hack)" then
+		if memory.read_u16_be(0xB0E8,"m68000 : ram : 0xE00000-0xE0FFFF") > oldring+9 then
+			ring_swap()
+			return
+		end
+		oldring = memory.read_u16_be(0xB0E8,"m68000 : ram : 0xE00000-0xE0FFFF")
 	end
 end
 
