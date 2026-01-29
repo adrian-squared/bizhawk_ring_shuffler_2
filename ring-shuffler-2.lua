@@ -195,7 +195,7 @@ function plugin.on_frame(data, settings)
 		end
 		oldring = memory.read_u8(0x1CC3,"Main RAM")
 	elseif name == "Sonic Blast (B)" or name == "Sonic Blast (W)" then -- SMS and Game Gear Versions
-		if memory.read_u8(0x125E,"Main RAM") > oldring then
+		if memory.read_u8(0x125E,"Main RAM") > oldring and memory.read_u8(0x1FBA,"Main RAM") ~= 0 then
 			ring_swap()
 			return
 		end
